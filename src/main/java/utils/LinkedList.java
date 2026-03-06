@@ -5,6 +5,12 @@ public class LinkedList {
     private Node first;
     private Node last;
 
+    public LinkedList(){
+        first = null;
+        last = null;
+        size = 0;
+    }
+
 
     private static class Node {
         private String data;
@@ -21,22 +27,20 @@ public class LinkedList {
         if (element == null) {
             throw new IllegalArgumentException("cannot add null to list");
         }
-
+//important part, refer more
         Node newNode = new Node(element);
         if (first == null) {
             first = newNode;
-            size++;
-            return;
 
+        } else {
+            last.next = newNode;
         }
 
-        Node current = first;
-        while (current.next != null) {
-            current = current.next;
-        }
-        current.next = newNode;
+        last = newNode;
         size++;
+
     }
+ //till here
 
     public String get(int index) {
         if (index < 0 || index >= size) {
