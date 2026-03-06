@@ -172,6 +172,37 @@ public class LinkedList {
         }
     }
 
+//    public void add(int index, String element){
+//        validateForNullElement(element);
+//        validateIndexForAdd(index);
+//
+//        Node newNode = new Node(element);
+//
+//        if(index == 0){
+//            newNode.next = first;
+//            first = newNode;
+//
+//            if(size == 0){
+//                last = newNode;
+//            }
+//        } else {
+//            Node current = first;
+//
+//            for(int i = 0; i < index - 1; i++){
+//                current = current.next;
+//            }
+//
+//            newNode.next = current.next;
+//            current.next = newNode;
+//
+//            if(index == size){
+//                last = newNode;
+//            }
+//        }
+//
+//        size++;
+//    }
+
     public void add(int index, String element){
         // VALIDATION
         // Validate element to confirm good AND real data : validateForNull
@@ -217,8 +248,6 @@ public class LinkedList {
 
 
 
-
-
     // todo: set()
 
     public void set(int index, String element){
@@ -261,5 +290,8 @@ public class LinkedList {
 
         return array;
     }
+
+
+
 
 }
